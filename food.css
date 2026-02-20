@@ -1,0 +1,283 @@
+/* === Color Palette Variables === */
+:root {
+    --primary-color: #E65100; /* Spice Saffron */
+    --secondary-color: #2E7D32; /* Cardamom Green */
+    --bg-color: #FFFDF7; /* Creamy Off-White */
+    --card-bg: #FFFFFF; /* Pure White */
+    --text-main: #3E2723; /* Deep Brown */
+    --text-light: #5D4037; /* Medium Brown */
+    --accent-color: #FFB300; /* Turmeric Yellow */
+}
+
+/* === Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+.trim-header {
+    background-color: #d35400; /* Decent Saffron Trim Color */
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.trim-header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.trim-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.trim-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.trim-header nav ul li a:hover {
+    color: #f1c40f; /* Golden yellow hover effect */
+}
+.img-logo img{
+     height: 60px;
+     width: 60px;
+     border:1px solid white;
+     border-radius: 50%;
+}
+.img-logo{
+     justify-content:  center;
+     display: flex;
+     font-size: 20px;
+     gap:20px;
+}
+
+
+
+/* === Header / Hero Section === */
+.hero {
+     height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://png.pngtree.com/thumb_back/fh260/background/20230527/pngtree-an-arrangement-of-various-indian-food-image_2683809.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+    opacity: 0.9;
+}
+.hero1 {
+     height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://img.freepik.com/premium-photo/indian-foods-isolated-black-background-hot-samosas-fly-smoke_783023-3051.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}
+.hero1 h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero1 p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+    opacity: 0.9;
+}
+.hero2 {
+     height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://t3.ftcdn.net/jpg/04/66/41/98/360_F_466419884_l0WxlXu6z1ImHiFvWXhpc75KgPNEHtVS.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}
+.hero2 h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero2 p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* === Main Container === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.intro h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Add a small decorative underline to the main title */
+.intro h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.intro p {
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* === Food Grid Layout === */
+.food-grid {
+    display: grid;
+    /* Slightly wider minimum card width for better image display */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* === Food Cards Styles === */
+.food-card {
+    background-color: var(--card-bg);
+    border-radius: 16px; /* Softer corners */
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 6px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Keeps images contained inside border-radius */
+}
+
+.food-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 5px 15px rgb(71, 71, 71)
+}
+
+/* --- NEW: Image Styling --- */
+.food-img {
+    width: 100%;
+    height: 200px; /* Fixed height ensures all cards are same size */
+    object-fit: cover; /* This crops the image so it doesn't look stretched */
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* -------------------------- */
+
+.region {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+/* Region Badge Colors */
+.north { background-color: #FFEBEE; color: #C62828; }
+.south { background-color: #E8F5E9; color: #2E7D32; }
+.west { background-color: #FFF8E1; color: #F57F17; }
+.east { background-color: #E3F2FD; color: #1565C0; }
+
+.food-card h3 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.food-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Ensures footer of card aligns evenly */
+}
+
+.food-card strong {
+    color: var(--text-main);
+}
+
+.state {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    border-top: 2px dotted #EEEEEE;
+    padding-top: 1rem;
+}
+
+/* === Footer === */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
