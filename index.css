@@ -150,23 +150,6 @@ body {
     text-decoration: none;
     color: black;
 }
-
-/* --- Lists & Tables (For Guide & Distance) --- 
-.info-list {
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-
-.info-list li {
-    margin-bottom: 15px;
-    padding-left: 10px;
-    border-left: 4px solid #d35400;
-    list-style-type: none;
-}
-    */
-
 .data-table {
     width: 100%;
     max-width: 800px;
@@ -240,4 +223,78 @@ footer {
 .data-table tr:hover{
     background: linear-gradient(to bottom, #FFFFFF 0%, #286912 100%);
     color: white;
+}
+@media screen and (max-width: 768px) {
+    /* 1. Header & Navigation */
+    .trim-header {
+        padding: 15px 20px;
+        justify-content: center; /* Centers the logo nicely */
+    }
+    
+    .trim-header nav {
+        display: none; /* Removes the go-to options as requested */
+    }
+
+    .img-logo {
+        font-size: 16px; /* Scales down the logo text slightly */
+        gap: 10px;
+    }
+    
+    .img-logo img {
+        height: 40px; /* Scales down the logo image */
+        width: 40px;
+    }
+
+    /* 2. Hero Section (Top Background Image) */
+    .hero {
+        height: 100vh; /* Adjusts to fully fit the mobile screen's height/width nicely */
+        margin-top: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* Prevents the big text from breaking the screen width */
+        padding: 0 10px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    /* 3. General Sections & Cards */
+    .content-section {
+        padding: 60px 5%; /* Reduces the massive 130px padding for mobile screens */
+    }
+
+    .content-section h2 {
+        font-size: 2rem;
+    }
+
+    .image-grid {
+        flex-direction: column; /* Stacks the cards vertically */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px; /* Allows cards to shrink and fit phone width */
+    }
+
+    /* 4. Table Adjustments */
+    .data-table {
+        display: block;
+        overflow-x: auto; /* Allows horizontal scrolling if table is too wide for phone */
+        white-space: nowrap;
+    }
+
+    /* 5. Budget Section */
+    .budget-container {
+        flex-direction: column; /* Stacks the budget boxes vertically */
+        align-items: center;
+    }
+
+    .budget-box {
+        width: 100%;
+        max-width: 350px;
+    }
 }
