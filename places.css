@@ -350,3 +350,70 @@ section p {
     opacity: 1;
     color: white;
 }
+/* --- Mobile Responsiveness for Places Pages (Max Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    /* Header Stacking */
+    .trim-header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .trim-header nav ul {
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .trim-header nav ul li a {
+        font-size: 0.95rem; /* Scales down the back button text */
+    }
+
+    .img-logo {
+        gap: 10px;
+        align-items: center;
+    }
+
+    .img-logo h1 {
+        font-size: 1.5rem !important; 
+    }
+
+    .img-logo img {
+        height: 45px;
+        width: 45px;
+    }
+
+    /* Hero Sections Adjustment */
+    .hero, .hero1, .hero2 {
+        height: auto;
+        min-height: 60vh;
+        padding: 120px 20px 40px; /* Gives room for the newly stacked, taller header */
+        margin-top: 0;
+    }
+
+    .hero h1, .hero1 h1, .hero2 h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p, .hero1 p, .hero2 p {
+        font-size: 1.1rem;
+    }
+
+    /* General Content & Grids */
+    .container {
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr; /* Stacks lists and descriptive cards vertically */
+        gap: 20px;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Shows 2 photos per row on mobile */
+        gap: 10px;
+    }
+}
