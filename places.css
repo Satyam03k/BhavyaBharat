@@ -417,3 +417,14 @@ section p {
         gap: 10px;
     }
 }
+/* --- Creator Tag in Footer --- */
+.creator-tag {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: #cccccc; /* Slightly lighter text for the sub-line */
+}
+
+.creator-tag strong {
+    color: #d35400; /* Uses your saffron trim color to make your name pop! */
+    letter-spacing: 1px;
+}
