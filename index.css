@@ -332,3 +332,6 @@ footer {
     color: #d35400; /* Uses your saffron trim color to make your name pop! */
     letter-spacing: 1px;
 }
+footer a{
+    text-decoration: none;
+}
