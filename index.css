@@ -336,6 +336,5 @@ footer a{
     text-decoration: none;
 }
 footer a:hover{
-    color: white;
-    font-size:30px;
+    color: red;
 }
